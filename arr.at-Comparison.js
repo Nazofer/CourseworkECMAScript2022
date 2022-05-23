@@ -17,4 +17,4 @@ const wrapSlice = () => array1.slice(-1)[0];
 
 const wrapLength = () => array1[array1.length - 1];
 
-benchmark.do(100000, [wrapAt, wrapSlice, wrapLength]);
+benchmark.do(10000, [wrapAt, wrapSlice, wrapLength]);
