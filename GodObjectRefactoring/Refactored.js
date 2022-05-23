@@ -65,7 +65,7 @@ class PersonController extends ServerTemplate {
       'Set-Cookie': 'mycookie=test',
       'Content-Type': 'text/html',
     });
-    const ip = this.req.connection.remoteAddress;
+    const ip = this.req.socket.remoteAddress;
     this.res.write(`<h1>Welcome</h1>Your IP: ${ip}`);
     this.res.end(`<pre>${JSON.stringify(cookies)}</pre>`);
   }
@@ -134,7 +134,8 @@ class PersonController extends ServerTemplate {
       },
     };
 
-    router[this.req.url]?.() || router.default();
+    const route = router[this.req.url] || router.default;
+    route();
   }
 
   handler() {
