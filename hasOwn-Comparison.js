@@ -5,7 +5,7 @@
  */
 'use strict';
 
-const benchmark = require('./benchmark.js');
+const benchmark = require('./optBenchmark.js');
 const { randStrGenerator, objGenerator } = require('./generate.js');
 
 const KEY_COUNTER = 1000;
@@ -29,8 +29,8 @@ const hasOwnWrap = () => {
 
 const hasOwnPropertyWrap = () => {
   for (let i = 0; i < existingKeys.length; i++) {
-    obj1.hasOwnProperty(existingKeys[i]);
-    obj1.hasOwnProperty(notExistingKeysArr[i]);
+    Object.prototype.hasOwnProperty.call(obj1, existingKeys[i]);
+    Object.prototype.hasOwnProperty.call(obj1, notExistingKeysArr[i]);
   }
 };
 
