@@ -23,7 +23,7 @@ const generateArr = () => {
 
   for (let i = 0; i < arrayLength; i++) {
     testArr.push(
-      i % 2 === 0
+      Math.random() > 0.5
         ? randNumGenerator(EL_COUNT)
         : randStrGenerator(randNumGenerator(20))
     );
