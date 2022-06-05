@@ -1,7 +1,7 @@
 /**
  * Benchmark of two ways to check if an object's property exists
  * 1. Object.hasOwn(obj, prop)
- * 2. obj.hasOwnProperty(prop)
+ * 2. Object.prototype.hasOwnProperty.call(obj, prop)
  */
 'use strict';
 
