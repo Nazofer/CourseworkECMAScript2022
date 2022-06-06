@@ -1,6 +1,5 @@
 /**
  * Example of using Promise.any()
- *
  */
 'use strict';
 
