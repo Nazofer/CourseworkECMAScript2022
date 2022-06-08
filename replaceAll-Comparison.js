@@ -5,7 +5,7 @@
  */
 'use strict';
 
-const benchmark = require('./benchmark.js');
+const benchmark = require('./optBenchmark.js');
 const { randStrGenerator } = require('./generate.js');
 
 // Get random string, substring of it, regexp with /g flag, new substring
