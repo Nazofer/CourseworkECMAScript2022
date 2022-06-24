@@ -17,7 +17,7 @@ The main way to access the last element of the array is in the form of ``arr[arr
 
 ## ``Object.hasOwn()``
 
-This proposal adds a ``Object.hasOwn(object, property)`` method with the same behavior as calling ``Object.prototype.hasOwnProperty.call(object, property)`` but seems more short.
+This proposal adds a ``Object.hasOwn(object, property)`` method with the same behavior as calling ``Object.prototype.hasOwnProperty.call(object, property)`` but seems more short. This method returns a boolean indicating whether the object has the specified property as its own property (as opposed to inheriting it).
 
 ## Top-level ``await`` operator
 
